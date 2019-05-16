@@ -2,3 +2,6 @@
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
+
+# This should be the last line of the file, do not make edits below
+[ -f ".functions.local" ] && source ".functions.local"

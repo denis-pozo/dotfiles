@@ -16,3 +16,6 @@ alias mvngen='mvn archetype:generate'
 #Git CLI aliases
 alias gi='git init'
 alias gs='git status'
+
+# This should be the last line of the file, do not make edits below
+[ -f ".aliases.local" ] && source ".aliases.local"
