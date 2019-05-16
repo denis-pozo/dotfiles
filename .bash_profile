@@ -17,25 +17,7 @@ export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transpo
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-#User specific aliases
-alias home='cd ~' 
-alias ..='cd ..'
-alias ?='man'
-alias reload='source .bash_profile'
-alias ll='ls -l'
-alias lr='ls -hartl'
-alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES'
-alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO'
-alias get='curl -OL'
-alias g='grep -i'
-alias mvngen='mvn archetype:generate'
-alias gi='git init'
-alias gs='git status'
 
-#Create a new directory and enter it
-function mkd() {
-	mkdir -p "$@" && cd "$_";
-}
 
 eval "$(rbenv init -)"
 

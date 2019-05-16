@@ -1,0 +1,18 @@
+#User specific aliases
+alias home='cd ~' 
+alias ..='cd ..'
+alias ?='man'
+alias reload='source .bash_profile'
+alias ll='ls -l'
+alias lr='ls -hartl'
+alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES'
+alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO'
+alias get='curl -OL'
+alias g='grep -i'
+
+#Maven CLI aliases
+alias mvngen='mvn archetype:generate'
+
+#Git CLI aliases
+alias gi='git init'
+alias gs='git status'
