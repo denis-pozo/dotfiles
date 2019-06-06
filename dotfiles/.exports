@@ -2,9 +2,10 @@
 export PS1='[\W]\$ '
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
-export MAVEN_OPTS="-Xmx1024m -Djava.net.preferIPv4Stack=true"
-export KARAF_DEBUG=true
+export PATH_TO_PROJECT="$HOME/development/projects"
+export PATH_TO_PLAYGROUND="$HOME/development/playground"
+
+#export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
 
 # This should be the last line of the file, do not make edits below
 [ -f ".exports.local" ] && source ".exports.local"
