@@ -44,6 +44,19 @@ install_tools () {
 	fi
 }
 
+config_git () {
+	echo "This utility will configure git client"
+	echo "Proceed? (y/n)"
+	read resp
+	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+		echo "Configuring your git client..."
+			sh git-config.sh
+		else
+			echo "Git config cancelled by user"
+		fi
+}
+
 init
 link
 install_tools
+config_git

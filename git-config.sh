@@ -1,8 +1,8 @@
 #!/bin/bash
 git config --global user.name "Denis Pozo"
-git config --global user.email "denis.pozo@dai-labor.de"
+git config --global user.email "denispzpd@gmail.de"
 
-touch ~/.gitignore_global
+touch .gitignore_global
 echo "*~" >> .gitignore_global
 
 # OS X
@@ -95,6 +95,9 @@ echo ".texlipse" >> .gitignore_global
 # STS (Spring Tool Suite)
 echo ".springBeans" >> .gitignore_global
 
+# Intellij
+echo ".idea" >> .gitignore_global
+echo ".iml" >> .gitignore_global
 
-
-git config --global core.excludesfile ~/.gitignore_global 
+mv .gitignore_global "$HOME"
+git config --global core.excludesfile "$HOME/.gitignore_global"
