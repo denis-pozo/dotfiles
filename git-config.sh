@@ -6,6 +6,7 @@ git config --global user.email "denispzpd@gmail.de"
 
 # Aliases
 git config --global alias.i init
+git config --global alias.a add
 git config --global alias.c 'commit -am'
 git config --global alias.co checkout
 git config --global alias.b branch
