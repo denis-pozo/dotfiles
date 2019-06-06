@@ -1,6 +1,22 @@
 #!/bin/bash
+
+# User Info
 git config --global user.name "Denis Pozo"
 git config --global user.email "denispzpd@gmail.de"
+
+# Aliases
+git config --global alias.i init
+git config --global alias.c 'commit -am'
+git config --global alias.co checkout
+git config --global alias.b branch
+git config --global alias.s status
+git config --global alias.ra remote add
+git config --global alias.po push origin
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+git config --global alias.mylog "log --pretty=format:'%h %s [%an]' --graph"
 
 touch .gitignore_global
 echo "*~" >> .gitignore_global
