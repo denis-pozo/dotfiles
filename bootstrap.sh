@@ -2,8 +2,14 @@
 
 # Initialize a few things
 init() {
-	echo "Making a development folder in $PATH_TO_DEVELOPMENT if it doesn't already exist"
-	mkdir -p "$PATH_TO_DEVELOPMENT"
+	#echo "Making a development folder in $PATH_TO_DEVELOPMENT if it doesn't already exist"
+	#mkdir -p "$PATH_TO_DEVELOPMENT"
+
+	echo "Making a project folder in $PATH_TO_PROJECT if it doesn't already exist"
+	mkdir -p "$PATH_TO_PROJECT"
+
+	echo "Making a playground folder in $PATH_TO_PLAYGROUND if it doesn't already exist"
+	mkdir -p "$PATH_TO_PLAYGROUND"
 }
 
 # Create symlinks to dotfiles
@@ -39,5 +45,5 @@ install_tools() {
 }
 
 init
-link
-install_tools
+#link
+#install_tools
