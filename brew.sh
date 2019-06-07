@@ -32,9 +32,15 @@ brew cask install java
 # Python 3
 brew install python
 
+# Maven
+brew install maven
+
 # ----------------------------------------------------
 # Useful tools
 # ----------------------------------------------------
+
+# Text editor
+brew cask instal sublime-text
 
 # Make requests with awesome response formatting
 brew install httpie
@@ -42,8 +48,9 @@ brew install httpie
 # Show directory structure with excellent formatting
 brew install tree
 
+# TODO fix this
 # Heroku
-brew install heroku
+# brew install heroku
 
 # Docker for containerization
 brew install docker
