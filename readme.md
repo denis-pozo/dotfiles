@@ -1,5 +1,5 @@
 # Bootstrap Project 
-for Mac OS (Mojave 10.14.5)
+''for Mac OS (Mojave 10.14.5)''
 
 This repository contains the required scripts and dotfiles to export my configuration to any machine.
 
