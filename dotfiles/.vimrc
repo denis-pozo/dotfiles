@@ -1,4 +1,3 @@
-
 " force home row usage
 map <up> <nop>
 map <down> <nop>
