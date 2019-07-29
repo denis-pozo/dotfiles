@@ -55,6 +55,9 @@ brew install tree
 # Docker for containerization
 brew install docker
 
+# Unrar tool
+brew install unrar
+
 # ---------------------------------------------
 # Terminal gimmicks xD
 # ---------------------------------------------
