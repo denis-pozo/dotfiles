@@ -1,5 +1,5 @@
 # Useful paths
-export PATH_TO_PROJECT="$HOME/development/projects"
+export PATH_TO_PROJECT="$HOME/development/work"
 export PATH_TO_PLAYGROUND="$HOME/development/playground"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec
@@ -11,9 +11,8 @@ export MAVEN_OPTS="-Xmx1024m"
 
 
 # Customize prompt to show only the working directory
-export PS1='[\W]\$ '
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+# export PS1='[\W]\$ '
+# export CLICOLOR=1
 
-# This should be the last line of the file, do not make edits below
+# export LSCOLORS=GxFxCxDxBxegedabagaced
 [ -f ".exports.local" ] && source ".exports.local"

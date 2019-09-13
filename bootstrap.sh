@@ -4,8 +4,8 @@ source "$PWD/dotfiles/.exports"
 
 # Initialize a few things
 init() {
-	echo "Making a project folder in $PATH_TO_PROJECT if it doesn't already exist"
-	mkdir -p "$PATH_TO_PROJECT"
+	echo "Making a project folder in $PATH_TO_WORK if it doesn't already exist"
+	mkdir -p "$PATH_TO_WORK"
 
 	echo "Making a playground folder in $PATH_TO_PLAYGROUND if it doesn't already exist"
 	mkdir -p "$PATH_TO_PLAYGROUND"
