@@ -27,7 +27,7 @@ brew tap caskroom/cask
 # ----------------------------------------------------
 
 # Java
-brew cask install java
+brew cask install adoptopenjdk
 
 # Python 3
 brew install python
@@ -40,7 +40,7 @@ brew install maven
 # ----------------------------------------------------
 
 # Text editor
-brew cask instal sublime-text
+brew cask install sublime-text
 
 # Make requests with awesome response formatting
 brew install httpie
