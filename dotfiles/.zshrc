@@ -135,6 +135,7 @@ source ~/.bash_profile
 PATH=~/development/work/toolbox/bin:~/development/work/management/bin:$PATH
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+source ~/development/work/toolbox/etc/git-config
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
