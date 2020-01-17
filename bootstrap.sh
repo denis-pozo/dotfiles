@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source "$PWD/dotfiles/.exports"
+export PATH_TO_WORK="$HOME/development/work"
+export PATH_TO_PLAYGROUND="$HOME/development/playground"
 
 # Initialize a few things
 init() {
@@ -35,6 +36,7 @@ install_tools () {
 		read resp
 		if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 			echo "Installing useful stuff using brew. This may take a while..."
+			echo "Executing brew.sh"
 			sh brew.sh
 		else
 			echo "Brew installation cancelled by user"
