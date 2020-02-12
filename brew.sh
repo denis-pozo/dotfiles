@@ -39,6 +39,24 @@ brew install maven
 # Useful tools
 # ----------------------------------------------------
 
+# System monitor
+brew install htop
+
+# Too Long Don't Read
+brew install tldr
+
+# JSON processor
+brew install jq
+
+# Disk Utiliy
+brew install ncduo
+
+# ToDo list built for the command-line
+brew install task
+
+# Terminal multiplexer
+brew install tmux
+
 # Text editor
 brew cask install sublime-text
 
