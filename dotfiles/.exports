@@ -5,6 +5,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec
 export RVM_HOME=$HOME/.rvm                        # Add RVM to PATH for scripting
 export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin:$RVM_HOME/bin
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
 # Maven 
 export MAVEN_OPTS="-Xmx1024m"
