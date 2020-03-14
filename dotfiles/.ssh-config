@@ -1,9 +1,0 @@
-# This must be copied at: ~/.ssh/
-ControlPersist 4h
-
-Host *
-	AddKeysToAgent yes
-	UseKeychain yes
-	ServerAliveInterval 120
-	IdentityFile ~/.ssh/id_rsa
-
