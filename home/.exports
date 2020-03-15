@@ -2,7 +2,7 @@
 
 export MAVEN_OPTS="-Xmx1024m"
 export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
+# export LANG="en_US.UTF-8"
 
 # Useful paths
 
