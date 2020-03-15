@@ -1,3 +1,6 @@
+# Add all identities to the ssh agent
+/usr/bin/ssh-add -A
+
 # Opening quote
 fortune
 
@@ -6,5 +9,3 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# This should be the last line of the file, do not make edits below
-[ -f ".functions.local" ] && source ".functions.local"

@@ -1,19 +1,37 @@
-# Useful paths
-export PATH_TO_PROJECT="$HOME/development/work"
-export PATH_TO_PLAYGROUND="$HOME/development/playground"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec
-export RVM_HOME=$HOME/.rvm                        # Add RVM to PATH for scripting
-export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin:$RVM_HOME/bin
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+# Variables
 
-# Maven 
 export MAVEN_OPTS="-Xmx1024m"
+export LC_ALL="en_US.UTF8"
 
+# Useful paths
 
-# Customize prompt to show only the working directory
-# export PS1='[\W]\$ '
-# export CLICOLOR=1
+export JAVA_HOME="$(/usr/libexec/java_home)"
+if [ -d "$JAVA_HOME/bin" ] ; then
+	export PATH="$PATH:$JAVA_HOME/bin"
+fi
 
-# export LSCOLORS=GxFxCxDxBxegedabagaced
-[ -f ".exports.local" ] && source ".exports.local"
+export M2_HOME="/usr/local/Cellar/maven/3.6.1/libexec"
+if [ -d "$M2_HOME/bin" ] ; then
+	export PATH="$PATH:$M2_HOME/bin"
+fi
+
+export GNU_GETOPT="/usr/local/opt/gnu-getopt"
+if [ -d "$GNU_GETOPT/bin" ] ; then
+	export PATH="$PATH:$GNU_GETOPT/bin"
+fi
+
+export JENV="$HOME/.jenv"
+if [ -d "$JENV/bin" ] ; then
+	export PATH="$PATH:$JENV/bin"
+	eval "($jenv init -)"
+fi
+
+export MBR_TOOLBOX="$HOME/development/work/toolbox"
+if [ -d "$MBR_TOOLBOX/bin" ] ; then
+	export PATH="$PATH:$MBR_TOOLBOX/bin"
+fi
+
+export MBR_MANAGEMENT="$HOME/development/work/management"
+if [ -d "$MBR_MANAGEMENT/bin" ] ; then
+	export PATH="$PATH:$MBR_MANAGEMENT/bin"
+fi

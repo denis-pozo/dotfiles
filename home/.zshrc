@@ -1,3 +1,12 @@
+# Loading configuration
+[ -f ~/.exports ] && source ~/.exports
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.functions ] && source ~/.functions 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="/usr/local/sbin:$PATH"
+
+# HERE STARTS ZSH 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -74,17 +83,11 @@ docker
 zsh-syntax-highlighting
 zsh-autosuggestions
 )
-
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -95,16 +98,6 @@ export LC_ALL=en_US.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
@@ -130,14 +123,4 @@ echo -e "\033]6;1;bg;red;brightness;18\a"
 echo -e "\033]6;1;bg;green;brightness;26\a"
 echo -e "\033]6;1;bg;blue;brightness;33\a"
 
-source ~/.bash_profile
-/usr/bin/ssh-add -A
-
-PATH=~/development/work/toolbox/bin:~/development/work/management/bin:$PATH
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-source ~/development/work/toolbox/etc/git-shortcuts
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export PATH="/usr/local/sbin:$PATH"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
