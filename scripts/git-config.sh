@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # User Info
 git config --global user.name "Denis Pozo"
@@ -23,19 +24,15 @@ git config --global alias.list 'config --list'
 touch .gitignore_global
 echo "*~" >> .gitignore_global
 
-# OS X
+echo "# OS X" >> .gitignore_global
 echo ".DS_Store" >> .gitignore_global
 echo ".AppleDouble" >> .gitignore_global
 echo ".LSOverride" >> .gitignore_global
 
-# Icon must end with two \r
-echo "Icon"  >> .gitignore_global
-
-
-# Thumbnails
+echo "# Thumbnails" >> .gitignore_global
 echo "._*" >> .gitignore_global
 
-# Files that might appear in the root of a volume
+echo "# Files that might appear in the root of a volume" >> .gitignore_global
 echo ".DocumentRevisions-V100" >> .gitignore_global
 echo ".fseventsd" >> .gitignore_global
 echo ".Spotlight-V100" >> .gitignore_global
@@ -43,25 +40,25 @@ echo ".TemporaryItems" >> .gitignore_global
 echo ".Trashes" >> .gitignore_global
 echo ".VolumeIcon.icns" >> .gitignore_global
 
-# Directories potentially created on remote AFP share
+echo "# Directories potentially created on remote AFP share" >> .gitignore_global
 echo ".AppleDB" >> .gitignore_global
 echo ".AppleDesktop" >> .gitignore_global
 echo "Network Trash Folder" >> .gitignore_global
 echo "Temporary Items" >> .gitignore_global
 echo ".apdisk" >> .gitignore_global
 
-# cache files for sublime text
+echo "# cache files for sublime text" >> .gitignore_global
 echo "*.tmlanguage.cache" >> .gitignore_global
 echo "*.tmPreferences.cache" >> .gitignore_global
 echo "*.stTheme.cache" >> .gitignore_global
 
-# workspace files are user-specific
+echo "# workspace files are user-specific" >> .gitignore_global
 echo "*.sublime-workspace" >> .gitignore_global
 
-# sftp configuration file
+echo "# sftp configuration file" >> .gitignore_global
 echo "sftp-config.json" >> .gitignore_global
 
-# Eclipse
+echo "# Eclipse" >> .gitignore_global
 echo ".metadata" >> .gitignore_global
 echo "bin/" >> .gitignore_global
 echo "tmp/" >> .gitignore_global
@@ -73,43 +70,43 @@ echo "local.properties" >> .gitignore_global
 echo ".settings/" >> .gitignore_global
 echo ".loadpath" >> .gitignore_global
 
-# Eclipse Core
+echo "# Eclipse Core" >> .gitignore_global
 echo ".project" >> .gitignore_global
 
-# External tool builders
+echo "# External tool builders">> .gitignore_global
 echo ".externalToolBuilders/" >> .gitignore_global
 
-# Locally stored "Eclipse launch configurations"
+echo "# Locally stored 'Eclipse launch configurations'" >> .gitignore_global
 echo "*.launch" >> .gitignore_global
 
-# PyDev specific (Python IDE for Eclipse)
+echo "# PyDev specific (Python IDE for Eclipse)">> .gitignore_global
 echo "*.pydevproject" >> .gitignore_global
 
-# CDT-specific (C/C++ Development Tooling)
+echo "# CDT-specific (C/C++ Development Tooling)" >> .gitignore_global
 echo ".cproject" >> .gitignore_global
 
-# JDT-specific (Eclipse Java Development Tools)
+echo "# JDT-specific (Eclipse Java Development Tools)" >> .gitignore_global
 echo ".classpath" >> .gitignore_global
 
-# Java annotation processor (APT)
+echo "# Java annotation processor (APT)" >> .gitignore_global
 echo ".factorypath" >> .gitignore_global
 
-# PDT-specific (PHP Development Tools)
+echo "# PDT-specific (PHP Development Tools)" >> .gitignore_global
 echo ".buildpath" >> .gitignore_global
 
-# sbteclipse plugin
+echo "# sbteclipse plugin" >> .gitignore_global
 echo ".target" >> .gitignore_global
 
-# Tern plugin
+echo "# Tern plugin" >> .gitignore_global
 echo ".tern-project" >> .gitignore_global
 
-# TeXlipse plugin
+echo "# TeXlipse plugin" >> .gitignore_global
 echo ".texlipse" >> .gitignore_global
 
-# STS (Spring Tool Suite)
+echo "# STS (Spring Tool Suite)" >> .gitignore_global
 echo ".springBeans" >> .gitignore_global
 
-# Intellij
+echo "# Intellij" >> .gitignore_global 
 echo ".idea" >> .gitignore_global
 echo ".iml" >> .gitignore_global
 

@@ -1,36 +1,24 @@
 #!/usr/bin/env bash
 
-link () {
-	echo "This utility will symlink the files in this repo to the home directory"
+init_dev() {
+	echo "Making custom folder structure for development."
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		cd "$PWD/dotfiles"
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
-			ln -sv "$PWD/$file" "$HOME"
-		done
-		echo "Symlinking complete"
-		cd ..
+		sh scripts/initialize-dev-folder.sh
 	else
-		echo "Symlinking cancelled by user"
-		return 1
+		echo "Init ~/development cancelled by the user"
 	fi
 }
 
-install_tools () {
-	if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
-		echo "This utility will install useful utilities using Homebrew"
-		echo "Proceed? (y/n)"
-		read resp
-		if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-			echo "Installing useful stuff using brew. This may take a while..."
-			echo "Executing brew.sh"
-			sh brew.sh
-		else
-			echo "Brew installation cancelled by user"
-		fi
+config_git () {
+	echo "Installing Homebrew and applications"
+	echo "Proceed? (y/n)"
+	read resp
+	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+		sh install-brew.sh
 	else
-		echo "Skipping installations using Homebrew because MacOS was not detected..."
+		echo "Installing brew and applications cancelled by the user"
 	fi
 }
 
@@ -40,17 +28,21 @@ config_git () {
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 		echo "Configuring your git client..."
-			sh git-config.sh
-		else
-			echo "Git config cancelled by user"
-		fi
+		sh git-config.sh
+	else
+		echo "Git config cancelled by user"
+	fi
 }
 
-sh scripts/initialize-dev-folders.sh
+# Create the following folders at $HOME: 
+# development/playground &development/work
+init_dev
+
+# Install homebrew and all dependencies defined in Brewfile
 sh scripts/install-homebrew.sh
-link
-echo '------------------------------------------'
-install_tools
-echo '------------------------------------------'
+
+# Symlink dotfiles files stored at ./home in $HOME
+stow home
+
+# Config git global
 config_git
-echo '------------------------------------------'

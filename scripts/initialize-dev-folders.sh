@@ -12,5 +12,4 @@ create_dev() {
         mkdir -p "$PATH_TO_PLAYGROUND"
 }
 
-echo "Creating development folder structure..."
 create_dev
