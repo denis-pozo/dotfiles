@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-init_dev() {
+init_dev () {
 	echo "Making custom folder structure for development."
 	echo "Proceed? (y/n)"
 	read resp
@@ -11,12 +11,12 @@ init_dev() {
 	fi
 }
 
-config_git () {
+install_brew () {
 	echo "Installing Homebrew and applications"
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		sh install-brew.sh
+		sh install-homebrew.sh
 	else
 		echo "Installing brew and applications cancelled by the user"
 	fi
@@ -39,9 +39,10 @@ config_git () {
 init_dev
 
 # Install homebrew and all dependencies defined in Brewfile
-sh scripts/install-homebrew.sh
+install_brew
 
 # Symlink dotfiles files stored at ./home in $HOME
+echo "Symlinking ./dotfiles/* at $HOME directory"
 stow home
 
 # Config git global
