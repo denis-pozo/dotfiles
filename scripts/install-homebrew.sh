@@ -16,8 +16,12 @@ else
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"/
 fi
 
-brew tap Homebrew/bundle
+# Make sure we're using the latest Homebrew
 brew update
+
+# Install dependencies defined in ../Brewfile
 brew bundle
+
+# Post-installation cleanup
 brew cleanup -s
 brew cask cleanup

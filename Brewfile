@@ -53,9 +53,6 @@ brew 'jq'
 # Too Long Don't Read
 brew 'tldr'
 
-# Disk utility
-brew 'ncduo'
-
 # Make http requests with awesome response formatting
 brew 'curl'
 brew 'wget'
@@ -70,6 +67,7 @@ brew 'kubectl'
 
 # Unrar tool
 brew 'unrar'
+brew 'minikube'
 
 # Managing dotfiles
 brew 'stow'
@@ -83,7 +81,6 @@ cask 'telegram'
 cask 'spotify'
 cask 'iterm2'
 cask 'docker'
-cask 'minikube'
 cask 'google-chrome'
 cask 'sourcetree'
 cask 'google-drive'
