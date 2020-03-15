@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # User Info
 git config --global user.name "Denis Pozo"
@@ -57,10 +57,6 @@ echo "*.stTheme.cache" >> .gitignore_global
 
 # workspace files are user-specific
 echo "*.sublime-workspace" >> .gitignore_global
-
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
 
 # sftp configuration file
 echo "sftp-config.json" >> .gitignore_global

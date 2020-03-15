@@ -1,17 +1,5 @@
 #!/usr/bin/env bash
 
-export PATH_TO_WORK="$HOME/development/work"
-export PATH_TO_PLAYGROUND="$HOME/development/playground"
-
-# Initialize a few things
-init() {
-	echo "Making a project folder in $PATH_TO_WORK if it doesn't already exist"
-	mkdir -p "$PATH_TO_WORK"
-
-	echo "Making a playground folder in $PATH_TO_PLAYGROUND if it doesn't already exist"
-	mkdir -p "$PATH_TO_PLAYGROUND"
-}
-
 link () {
 	echo "This utility will symlink the files in this repo to the home directory"
 	echo "Proceed? (y/n)"
@@ -58,9 +46,8 @@ config_git () {
 		fi
 }
 
-echo '------------------------------------------'
-init
-echo '------------------------------------------'
+sh scripts/initialize-dev-folders.sh
+sh scripts/install-homebrew.sh
 link
 echo '------------------------------------------'
 install_tools
