@@ -82,6 +82,7 @@ git
 docker
 zsh-syntax-highlighting
 zsh-autosuggestions
+kubectl
 )
 source $ZSH/oh-my-zsh.sh
 
