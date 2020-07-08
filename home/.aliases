@@ -32,6 +32,9 @@ alias k='kubectl'
 # Maven CLI aliases
 alias mvngen='mvn archetype:generate'
 
+# Fixes pyenv playing nice with brew
+alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
+
 # TODO Create own git-shortcuts one
 [ -f ~/development/work/toolbox/etc/git-shortcuts ] && source ~/development/work/toolbox/etc/git-shortcuts 
 

@@ -44,3 +44,12 @@ export CURL="/usr/local/opt/curl"
 if [ -d "$CURL/bin" ] ; then
 	export PATH="$CURL/bin:$PATH"
 fi
+
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# For git and some other apps
+export VISUAL=/usr/local/bin/nvim
+
