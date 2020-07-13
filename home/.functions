@@ -1,9 +1,6 @@
 # Add all identities to the ssh agent
 /usr/bin/ssh-add -A
 
-# Opening quote
-fortune
-
 #Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
