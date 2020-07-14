@@ -61,3 +61,8 @@ export TERM="xterm-256color"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+# Pyenv
+eval "$(pyenv init -)"
+
+# Jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
