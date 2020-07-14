@@ -1,0 +1,8 @@
+# Theme
+denysdovhan/spaceship-prompt
+
+# Plugin
+djui/alias-tips
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
