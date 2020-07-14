@@ -1,3 +1,8 @@
+# To statically load this list of plugins do the following everytime 
+# after updating the list:
+# antibody bundle < ~/dotfiles/home/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# It produces a shell script loaded in .zshrc called .zsh_plugins.sh
+#
 # Theme
 denysdovhan/spaceship-prompt
 
