@@ -47,7 +47,17 @@ bindkey -M vicmd v edit-command-line
 # starship prompt
 eval "$(starship init zsh)"
 
-# fzf
+# Zsh autocompletion
+# autoload -U compinit && compinit
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Tmux colors
+export TERM="xterm-256color"
+
+# Node
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
