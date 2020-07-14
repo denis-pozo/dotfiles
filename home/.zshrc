@@ -2,7 +2,6 @@
 # [ -f ~/.exports ] && source ~/.exports
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.functions ] && source ~/.functions 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Antibody plugins manager (static loading)
 # Update plugins with antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
@@ -22,8 +21,6 @@ path=("$HOME/development/work/bidder/bin" $path)
 path=("$HOME/development/work/management/bin" $path)
 path=("$HOME/development/work/broker/bin" $path)
 export PATH
-# m2 local
-# pyenv config stuff
 
 # Locale
 export LC_ALL=en_US.UTF-8
@@ -39,6 +36,14 @@ SAVEHIST=1000000
 # Require cd always
 unsetopt autocd
 
-# Vim
+# Enable vi-mode in command line
+bindkey -v
+export KEYTIMEOUT=1
 export VISUAL=/usr/local/bin/nvim
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
