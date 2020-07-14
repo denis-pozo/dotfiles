@@ -25,6 +25,12 @@ brew 'node'
 # THE UTILS
 brew 'coreutils'
 brew 'moreutils'
+brew 'make'
+brew 'findutils'
+brew 'gnu-sed'
+brew 'grep'
+brew 'ripgrep'
+brew 'gnu-getopt'
 
 # Bash shell, better version than the one macos comes with
 brew 'bash'
@@ -34,6 +40,9 @@ brew 'bash-completion'
 brew 'zsh'
 brew 'zsh-completion'
 brew 'fzf'
+
+# Starship theme
+brew 'starship'
 
 # Preferred editor
 brew 'neovim'
@@ -64,10 +73,10 @@ brew 'pstree'
 
 # Kubernetes - Our favourite containers orchestrator
 brew 'kubectl'
+brew 'minikube'
 
 # Unrar tool
 brew 'unrar'
-brew 'minikube'
 
 # Managing dotfiles
 brew 'stow'
@@ -84,7 +93,6 @@ cask 'docker'
 cask 'google-chrome'
 cask 'sourcetree'
 cask 'google-drive'
-cask 'sublime-text'
 
 # --------------------------------------------
 # Terminal gimmics xD
