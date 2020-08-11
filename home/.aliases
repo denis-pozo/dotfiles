@@ -35,6 +35,9 @@ alias mvngen='mvn archetype:generate'
 # Fixes pyenv playing nice with brew
 alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 
+# Browser-sync (live server emulator for js)
+alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000'
+
 # TODO Create own git-shortcuts one
-[ -f ~/development/work/toolbox/etc/git-shortcuts ] && source ~/development/work/toolbox/etc/git-shortcuts 
+# [ -f ~/development/work/toolbox/etc/git-shortcuts ] && source ~/development/work/toolbox/etc/git-shortcuts 
 

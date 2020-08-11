@@ -15,6 +15,7 @@ path=("/usr/local/opt/findutils/libexec/gnubin" $path)
 path=("/usr/local/opt/gnu-sed/libexec/gnubin" $path)
 path=("/usr/local/opt/grep/libexec/gnubin" $path)
 path=("/usr/local/opt/gnu-getopt/libexec/gnubin" $path)
+path=("/usr/local/opt/helm@2/bin" $path)
 path=("/usr/local/opt/curl/bin" $path)
 path=("$HOME/development/work/toolbox/bin" $path)
 path=("$HOME/development/work/bidder/bin" $path)
@@ -48,8 +49,8 @@ bindkey -M vicmd v edit-command-line
 eval "$(starship init zsh)"
 
 # Zsh autocompletion
-# autoload -U compinit && compinit
-# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -60,6 +61,9 @@ export TERM="xterm-256color"
 # Node
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+# Local IP for live servers
+export LOCAL_IP=`ipconfig getifaddr en0`
 
 # Pyenv
 eval "$(pyenv init -)"
