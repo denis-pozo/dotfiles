@@ -39,7 +39,8 @@ unsetopt autocd
 
 # Enable vi-mode in command line
 bindkey -v
-export KEYTIMEOUT=1
+bindkey -M viins 'jk' vi-cmd-mode 
+export KEYTIMEOUT=100
 export VISUAL=/usr/local/bin/nvim
 autoload -U edit-command-line
 zle -N edit-command-line
