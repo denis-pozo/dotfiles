@@ -31,17 +31,15 @@ alias get='curl -OL'
 
 # Kubernetes
 alias k='kubectl'
-
-# Maven CLI aliases
-alias mvngen='mvn archetype:generate'
+alias kg='kubectl get'                                                          
+alias kd='kubectl describe'                                                     
+alias kr='kubectl delete'                                                       
+alias kl='kubectl logs'                                                         
+alias ke='kubectl exec -it'                                                     
+alias kt='kubectl top'
 
 # Fixes pyenv playing nice with brew
 alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 
 # Browser-sync (live server emulator for js)
 alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000'
-
-
-# TODO Create own git-shortcuts one
-# [ -f ~/development/work/toolbox/etc/git-shortcuts ] && source ~/development/work/toolbox/etc/git-shortcuts 
-
