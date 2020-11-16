@@ -3,9 +3,9 @@ alias home='cd ~'
 alias notes='vim ~/notes.txt'
 
 if [ -n "$ZSH_VERSION" ]; then
-	alias reload='source .zshrc'
+	alias reload='source ~/.zshrc'
 elif [ -n "$BASH_VERSION" ]; then
-	alias reload='source .bash_profile'
+	alias reload='source ~/.bash_profile'
 fi
 
 # Editor
