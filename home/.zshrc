@@ -8,14 +8,15 @@ source ~/.zsh_plugins.sh
 
 # Path
 path=("HOME/.jenv/bin" $path)
+path=("/usr/local/opt/gnu-getopt/bin" $path)
 path=("/usr/local/opt/coreutils/libexec/gnubin" $path)
 path=("/usr/local/opt/make/libexec/gnubin" $path)
 path=("/usr/local/opt/findutils/libexec/gnubin" $path)
 path=("/usr/local/opt/gnu-sed/libexec/gnubin" $path)
 path=("/usr/local/opt/grep/libexec/gnubin" $path)
-path=("/usr/local/opt/gnu-getopt/libexec/gnubin" $path)
 path=("/usr/local/opt/helm@2/bin" $path)
 path=("/usr/local/opt/curl/bin" $path)
+path=("/usr/local/sbin" $path)
 path=("$HOME/development/work/toolbox/bin" $path)
 path=("$HOME/development/work/bidder/bin" $path)
 path=("$HOME/development/work/management/bin" $path)
