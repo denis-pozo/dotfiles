@@ -14,8 +14,8 @@ path=("/usr/local/opt/make/libexec/gnubin" $path)
 path=("/usr/local/opt/findutils/libexec/gnubin" $path)
 path=("/usr/local/opt/gnu-sed/libexec/gnubin" $path)
 path=("/usr/local/opt/grep/libexec/gnubin" $path)
-path=("/usr/local/opt/helm@2/bin" $path)
 path=("/usr/local/opt/curl/bin" $path)
+path=("/usr/local/opt/sqlite/bin" $path)
 path=("/usr/local/sbin" $path)
 path=("$HOME/development/work/toolbox/bin" $path)
 path=("$HOME/development/work/bidder/bin" $path)
@@ -61,13 +61,18 @@ export TERM="xterm-256color"
 
 # Node
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+# This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" 
 
 # Local IP for live servers
 export LOCAL_IP=`ipconfig getifaddr en0`
 
 # Pyenv
-eval "$(pyenv init -)"
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 
 # Jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi

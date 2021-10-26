@@ -37,6 +37,11 @@ alias kr='kubectl delete'
 alias kl='kubectl logs'                                                         
 alias ke='kubectl exec -it'                                                     
 alias kt='kubectl top'
+alias load-minikube='cp ~/.kube/minikube-config ~/.kube/config'
+alias load-mbrkube='cp ~/.kube/mbr-config ~/.kube/config'
+
+# AWS
+alias dsp-aws-activate='source ~/development/work/terraform/bin/activate'
 
 # Fixes pyenv playing nice with brew
 alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
