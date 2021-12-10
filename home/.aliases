@@ -1,6 +1,6 @@
 # User specific aliases
 alias home='cd ~' 
-alias notes='vim ~/notes.md'
+alias notes='vim ~/Documents/notes/notes.md'
 
 if [ -n "$ZSH_VERSION" ]; then
 	alias reload='source ~/.zshrc'
