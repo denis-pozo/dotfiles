@@ -5,7 +5,7 @@ init_dev () {
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		sh scripts/initialize-dev-folder.sh
+		sh scripts/initialize-dev-folders.sh
 	else
 		echo "Init ~/development cancelled by the user"
 	fi
@@ -16,7 +16,7 @@ install_brew () {
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		sh install-homebrew.sh
+		sh scripts/install-homebrew.sh
 	else
 		echo "Installing brew and applications cancelled by the user"
 	fi
@@ -28,7 +28,7 @@ config_git () {
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 		echo "Configuring your git client..."
-		sh git-config.sh
+		sh scripts/git-config.sh
 	else
 		echo "Git config cancelled by user"
 	fi
