@@ -3,7 +3,7 @@ set -e
 
 # User Info
 git config --global user.name "Denis Pozo"
-git config --global user.email "denispzpd@gmail.de"
+git config --global user.email "denispzpd@gmail.com"
 
 # Aliases
 git config --global alias.i init
