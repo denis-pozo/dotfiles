@@ -1,8 +1,5 @@
 # Config file for managing brew dependencies
 
-# Specify a directory to install cask applications
-cask_args appdir: '/Applications'
-
 # Speficy bundle repo
 tap 'homebrew/bundle' || true
 
@@ -10,11 +7,12 @@ tap 'homebrew/bundle' || true
 # Programming Languages and Frameworks
 # --------------------------------------------
 
-cask 'java'
+brew 'java'
+brew 'jenv'
 brew 'maven'
 brew 'node'
-# brew 'python'
-# brew 'python3'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
 # brew 'rbenv'
 # brew 'ruby-build'
 
@@ -46,6 +44,7 @@ brew 'starship'
 
 # Preferred editor
 brew 'neovim'
+brew 'antibody'
 
 # Terminal multiplexer
 brew 'tmux'
@@ -75,23 +74,8 @@ brew 'pstree'
 brew 'kubectl'
 brew 'minikube'
 
-# Unrar tool
-brew 'unrar'
-
 # Managing dotfiles
 brew 'stow'
-
-# --------------------------------------------
-# Applications with UI
-# --------------------------------------------
-
-cask 'slack'
-cask 'telegram'
-cask 'spotify'
-cask 'iterm2'
-cask 'google-chrome'
-cask 'sourcetree'
-cask 'google-drive'
 
 # --------------------------------------------
 # Terminal gimmics xD

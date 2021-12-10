@@ -13,7 +13,7 @@ if [ -f /usr/local/bin/brew ]; then
 	echo "    -> Already installed"
 else
 	echo "Installing Homebrew"
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"/
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Make sure we're using the latest Homebrew
@@ -24,4 +24,3 @@ brew bundle
 
 # Post-installation cleanup
 brew cleanup -s
-brew cask cleanup
