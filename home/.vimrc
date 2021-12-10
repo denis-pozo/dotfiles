@@ -1,68 +1,68 @@
-" This option makes Vim behave in a more useful way.
-set nocompatible
-
-" There are potential security implications to having modelines on (though
-" they are cool). If you don't know what they are, it's better not to mess
-" with it.
-set nomodeline
-
-" This is turning on three related options for filetypes; detection, plugins,
-" and identation. Vim will autodetect a lot of filetypes and turn on custom
-" options / indentation rules per filetype.
-filetype plugin indent on
-
-" Turns on syntax highlighting. 
 syntax on
 
-" Enables the wildmenu. When on, command-line mode (the mode when you start
-" with a ':' ) completion operates in an "enhanced" mode. 
-set wildmode=longest:full,full
-set wildmenu
-
-" Sets the maximum width of text that is being inserted.
-set textwidth=80
-" The sequence of letters describes how automatic formatting is to be done.
-" c - Auto-wrap comments using textwidth, inserting the current comment leader
-" automatically
-" q - Allow formatting of comments with "gq".
-set formatoptions=cq
-
-" Enables line numbers.
-set number
-
-" Sets the minimum number of screen lines to keep above and below the cursor.
-set scrolloff=5
-
-" Copy indent from current line when starting a new line.
-set autoindent
-
-" Turns on incremental search
+set noerrorbells
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 set incsearch
 
-" Show the line and column number of the cursor position in the lower right.
-set ruler
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" Show partial commands in the last line of the screen.
-set showcmd
+call plug#begin('~/.vim/plugged')
 
-" Force home row usage, instead of arrows.
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'morhetz/gruvbox'
+Plug 'jremmen/vim-ripgrep'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
+Plug 'vim-utils/vim-man'
+Plug 'lyuts/vim-rtags'
+Plug 'git@github.com:kien/ctrlp.vim.git'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'mbbill/undotree'
+Plug 'junegunn/fzf',{'do':{->fzf#install()}}
+Plug 'junegunn/fzf.vim'
 
-" Escape from insert mode with 'jk' key strokes. <ESC> still works.
-inoremap jk <ESC>
+call plug#end()
 
-" Spare extra modifier key for commands (disabled)
-" nnoremap ; :
+colorscheme gruvbox
+set background=dark
 
-" ??????
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
 
-" Remove octals as number format
-set nrformats -=octal
+let g:ctrlp_user_command=['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let mapleader=" "
+let g:netrw_browse_split=2
+let g:netrw_banner=0
+let g:netrw_winsize=25
 
-" Sets backspace to work the way you'd expect it to. (disabled)
-" set backspace=indent,eol,start
+let g:ctrlp_use_catching=0
+
+" Remapping baby "
+" General "
+inoremap jk <ESC>  
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>ps :Rg<SPACE>
+nnoremap <C-p> :GFiles<CR>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
+
+" YCM
+nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
