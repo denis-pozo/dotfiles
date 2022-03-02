@@ -10,10 +10,10 @@ tap 'homebrew/bundle' || true
 brew 'java'
 brew 'jenv'
 brew 'maven'
-brew 'node'
+brew 'nvm'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
-# brew 'rbenv'
+brew 'rbenv'
 # brew 'ruby-build'
 
 # --------------------------------------------
@@ -73,6 +73,11 @@ brew 'pstree'
 # Kubernetes - Our favourite containers orchestrator
 brew 'kubectl'
 brew 'minikube'
+brew 'helm'
+
+# AWS tools
+brew aws-cli
+aws-vault
 
 # Managing dotfiles
 brew 'stow'
