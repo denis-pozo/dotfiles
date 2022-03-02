@@ -8,6 +8,7 @@ source ~/.zsh_plugins.sh
 
 # Path
 path=("HOME/.jenv/bin" $path)
+path=("HOME/.rbenv/bin" $path)
 path=("/usr/local/opt/gnu-getopt/bin" $path)
 path=("/usr/local/opt/coreutils/libexec/gnubin" $path)
 path=("/usr/local/opt/make/libexec/gnubin" $path)
@@ -41,10 +42,12 @@ unsetopt autocd
 bindkey -v
 bindkey 'jk' vi-cmd-mode 
 export KEYTIMEOUT=100
-export VISUAL=/usr/local/bin/nvim
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+export VISUAL=/usr/local/bin/nvim
+export EDITOR="$VISUAL"
 
 # starship prompt
 eval "$(starship init zsh)"
@@ -76,3 +79,11 @@ fi
 
 # Jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Rbenv
+eval "$(rbenv init - $SHELL)"
