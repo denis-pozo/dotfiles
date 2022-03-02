@@ -26,7 +26,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf',{'do':{->fzf#install()}}
 Plug 'junegunn/fzf.vim'
