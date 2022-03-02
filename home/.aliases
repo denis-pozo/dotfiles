@@ -39,6 +39,7 @@ alias ke='kubectl exec -it'
 alias kt='kubectl top'
 alias load-minikube='cp ~/.kube/minikube-config ~/.kube/config'
 alias load-mbrkube='cp ~/.kube/mbr-config ~/.kube/config'
+alias load-awskube='cp ~/.kube/stroeer-labs-config ~/.kube/config'
 
 # AWS
 alias dsp-aws-activate='source ~/development/work/terraform/bin/activate'
@@ -48,3 +49,6 @@ alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 
 # Browser-sync (live server emulator for js)
 alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000'
+
+# MBR
+alias reload-creatives='kubectl get pods -l app.kubernetes.io/name=joker -o name | xargs -I% kubectl exec % -- joker-shell-execute reload-creatives-from-quarantined-campaigns'
