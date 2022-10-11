@@ -52,3 +52,7 @@ alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000
 
 # MBR
 alias reload-creatives='kubectl get pods -l app.kubernetes.io/name=joker -o name | xargs -I% kubectl exec % -- joker-shell-execute reload-creatives-from-quarantined-campaigns'
+
+alias puppetcd='cd ~/development/puppet'
+alias biddercd='cd ~/development/bidder'
+alias brokercd='cd ~/development/broker'
