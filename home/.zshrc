@@ -21,6 +21,7 @@ path=("$HOME/development/work/toolbox/bin" $path)
 path=("$HOME/development/work/bidder/bin" $path)
 path=("$HOME/development/work/management/bin" $path)
 path=("$HOME/development/work/broker/bin" $path)
+path=("/usr/local/opt/tcl-tk/bin" $path)
 
 # Locale
 export LC_ALL=en_US.UTF-8
@@ -83,4 +84,3 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
