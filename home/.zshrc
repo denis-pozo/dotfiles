@@ -7,8 +7,7 @@
 source ~/.zsh_plugins.sh
 
 # Path
-path=("HOME/.jenv/bin" $path)
-path=("HOME/.rbenv/bin" $path)
+path=("/usr/local/opt/openssl/bin" $path)
 path=("/usr/local/opt/gnu-getopt/bin" $path)
 path=("/usr/local/opt/coreutils/libexec/gnubin" $path)
 path=("/usr/local/opt/make/libexec/gnubin" $path)
@@ -22,7 +21,6 @@ path=("$HOME/development/work/toolbox/bin" $path)
 path=("$HOME/development/work/bidder/bin" $path)
 path=("$HOME/development/work/management/bin" $path)
 path=("$HOME/development/work/broker/bin" $path)
-export PATH
 
 # Locale
 export LC_ALL=en_US.UTF-8
@@ -77,13 +75,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# Jenv
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-
 # Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Rbenv
-eval "$(rbenv init - $SHELL)"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
