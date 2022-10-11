@@ -53,6 +53,20 @@ alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000
 # MBR
 alias reload-creatives='kubectl get pods -l app.kubernetes.io/name=joker -o name | xargs -I% kubectl exec % -- joker-shell-execute reload-creatives-from-quarantined-campaigns'
 
-alias puppetcd='cd ~/development/puppet'
-alias biddercd='cd ~/development/bidder'
-alias brokercd='cd ~/development/broker'
+alias puppet-repo='cd ~/development/puppet'
+alias bidder='cd ~/development/bidder'
+alias broker='cd ~/development/broker'
+
+# Calendar tool
+alias jan='cal -m 01'
+alias feb='cal -m 02'
+alias mar='cal -m 03'
+alias apr='cal -m 04'
+alias may='cal -m 05'
+alias jun='cal -m 06'
+alias jul='cal -m 07'
+alias aug='cal -m 08'
+alias sep='cal -m 09'
+alias oct='cal -m 10'
+alias nov='cal -m 11'
+alias dec='cal -m 12'
