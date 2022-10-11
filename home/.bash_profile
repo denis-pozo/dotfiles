@@ -1,7 +1,5 @@
+source ${HOME}/development/default-profile/bash_profile
 export PATH="$HOME/bin:$PATH"
 
-source ~/.exports
 source ~/.aliases
 source ~/.functions
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
