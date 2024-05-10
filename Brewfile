@@ -4,19 +4,6 @@
 tap 'homebrew/bundle' || true
 
 # --------------------------------------------
-# Programming Languages and Frameworks
-# --------------------------------------------
-
-brew 'java'
-brew 'jenv'
-brew 'maven'
-brew 'nvm'
-brew 'pyenv'
-brew 'pyenv-virtualenv'
-brew 'rbenv'
-# brew 'ruby-build'
-
-# --------------------------------------------
 # Utils
 # --------------------------------------------
 
@@ -29,6 +16,7 @@ brew 'gnu-sed'
 brew 'grep'
 brew 'ripgrep'
 brew 'gnu-getopt'
+brew 'postgresql@15'
 
 # Bash shell, better version than the one macos comes with
 brew 'bash'
@@ -51,6 +39,7 @@ brew 'tmux'
 
 # Versions control CLI
 brew 'git'
+brew 'gh'
 
 # System monitor with graphic interface
 brew 'htop'
@@ -76,11 +65,19 @@ brew 'minikube'
 brew 'helm'
 
 # AWS tools
-brew aws-cli
-aws-vault
+# brew 'aws-cli'
+# brew 'aws-vault'
 
 # Managing dotfiles
 brew 'stow'
+
+# For pyenv: https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+brew 'openssl'
+brew 'readline'
+brew 'sqlite3'
+brew 'xz'
+brew 'zlib'
+brew 'tcl-tk'
 
 # --------------------------------------------
 # Terminal gimmics xD
@@ -94,4 +91,17 @@ brew 'cowsay'
 
 # Multicolored text output
 brew 'lolcat'
+
+# --------------------------------------------
+# Apps
+# --------------------------------------------
+
+cask '1password'
+cask 'docker'
+cask 'git-credential-manager'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'jetbrains-toolbox'
+cask 'slack'
+cask 'tunnelblick'
 
