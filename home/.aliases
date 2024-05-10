@@ -1,6 +1,11 @@
+# Development environments
+alias ssp="chsh -s $(brew --prefix)/bin/bash;exec bash -l;"
+alias dsp="chsh -s /bin/zsh;exec zsh -l;"
+
 # User specific aliases
 alias home='cd ~' 
 alias notes='vim ~/Documents/notes/notes.md'
+alias local-notes='vim ~/local-notes.md'
 
 if [ -n "$ZSH_VERSION" ]; then
 	alias reload='source ~/.zshrc'
@@ -38,22 +43,16 @@ alias kl='kubectl logs'
 alias ke='kubectl exec -it'                                                     
 alias kt='kubectl top'
 alias load-minikube='cp ~/.kube/minikube-config ~/.kube/config'
-alias load-mbrkube='cp ~/.kube/mbr-config ~/.kube/config'
 alias load-awskube='cp ~/.kube/stroeer-labs-config ~/.kube/config'
 
 # AWS
-alias dsp-aws-activate='source ~/development/work/terraform/bin/activate'
-
-# Fixes pyenv playing nice with brew
-alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
+alias dsp-aws-activate='source ~/development/labs-berlin-ops/terraform/bin/activate'
 
 # Browser-sync (live server emulator for js)
 alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000'
 
 # MBR
 alias reload-creatives='kubectl get pods -l app.kubernetes.io/name=joker -o name | xargs -I% kubectl exec % -- joker-shell-execute reload-creatives-from-quarantined-campaigns'
-
-alias puppet-repo='cd ~/development/puppet'
 alias bidder='cd ~/development/bidder'
 alias broker='cd ~/development/broker'
 

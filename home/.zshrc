@@ -17,10 +17,10 @@ path=("/usr/local/opt/grep/libexec/gnubin" $path)
 path=("/usr/local/opt/curl/bin" $path)
 path=("/usr/local/opt/sqlite/bin" $path)
 path=("/usr/local/sbin" $path)
-path=("$HOME/development/work/toolbox/bin" $path)
-path=("$HOME/development/work/bidder/bin" $path)
-path=("$HOME/development/work/management/bin" $path)
-path=("$HOME/development/work/broker/bin" $path)
+path=("$HOME/development/toolbox/bin" $path)
+path=("$HOME/development/bidder/bin" $path)
+path=("$HOME/development/management/bin" $path)
+path=("$HOME/development/broker/bin" $path)
 path=("/usr/local/opt/tcl-tk/bin" $path)
 
 # Locale
@@ -61,11 +61,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # Tmux colors
 export TERM="xterm-256color"
 
-# Node
-export NVM_DIR="$HOME/.nvm"
-# This loads nvm
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" 
-
 # Local IP for live servers
 export LOCAL_IP=`ipconfig getifaddr en0`
 
@@ -84,3 +79,5 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+source /Users/denispozo/.docker/init-zsh.sh || true # Added by Docker Desktop
