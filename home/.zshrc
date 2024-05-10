@@ -4,7 +4,8 @@
 
 # Antibody plugins manager (static loading)
 # Update plugins with antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-source ~/.zsh_plugins.sh
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
 
 # Path
 path=("/usr/local/opt/openssl/bin" $path)
