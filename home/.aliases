@@ -1,6 +1,6 @@
-# Development environments
-alias ssp="chsh -s $(brew --prefix)/bin/bash;exec bash -l;"
-alias dsp="chsh -s /bin/zsh;exec zsh -l;"
+# Arch based brew
+alias ibrew="arch -x86_64 /usr/local/homebrew/bin/brew"
+alias brew="/opt/homebrew/bin/brew"
 
 # User specific aliases
 alias home='cd ~' 
@@ -46,15 +46,15 @@ alias load-minikube='cp ~/.kube/minikube-config ~/.kube/config'
 alias load-awskube='cp ~/.kube/stroeer-labs-config ~/.kube/config'
 
 # AWS
-alias dsp-aws-activate='source ~/development/labs-berlin-ops/terraform/bin/activate'
+alias dsp-aws-activate='source ~/development/dsp-projects/terraform/bin/activate'
 
 # Browser-sync (live server emulator for js)
 alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000'
 
 # MBR
 alias reload-creatives='kubectl get pods -l app.kubernetes.io/name=joker -o name | xargs -I% kubectl exec % -- joker-shell-execute reload-creatives-from-quarantined-campaigns'
-alias bidder='cd ~/development/bidder'
-alias broker='cd ~/development/broker'
+alias bidder='cd ~/development/dsp-projects/bidder'
+alias broker='cd ~/development/dsp-projects/broker'
 
 # Calendar tool
 alias jan='cal -m 01'
