@@ -1,7 +1,8 @@
 source ${HOME}/development/default-profile/bash_profile
+
 export PATH="$HOME/bin:$PATH"
 
-export AWS_CONFIG_FILE=${HOME}/development/default-profile/config/.aws/config
+# export AWS_CONFIG_FILE=${HOME}/development/default-profile/config/.aws/config
 
 source ~/.aliases
 source ~/.functions
