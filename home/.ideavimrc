@@ -1,1 +1,12 @@
-source ~/.vimrc
+" Remapping leader"
+let mapleader=" "
+
+" General "
+inoremap jk <ESC>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
+nnoremap <silent> <leader>nh :nohl<CR>
