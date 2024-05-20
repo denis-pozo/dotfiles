@@ -17,6 +17,7 @@ brew 'grep'
 brew 'ripgrep'
 brew 'gnu-getopt'
 brew 'postgresql@15'
+brew 'bat'
 
 # Bash shell, better version than the one macos comes with
 brew 'bash'
