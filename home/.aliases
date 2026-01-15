@@ -69,3 +69,6 @@ alias sep='cal -m 09'
 alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
+
+# Claude code
+alias my-claude='/Users/denispozo/.nvm/versions/node/v20.18.1/bin/claude'
