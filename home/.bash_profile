@@ -1,4 +1,4 @@
-source ${HOME}/development/default-profile/bash_profile
+source ${HOME}/development/tools/profile/bash_profile
 
 export PATH="$HOME/bin:$PATH"
 

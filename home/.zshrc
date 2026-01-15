@@ -7,7 +7,7 @@ source  $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Loading ssp-core config
-source $HOME/development/default-profile/zsh_profile
+source $HOME/development/tools/profile/zsh_profile
 
 # zsh - autosuggestions & highlighting
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
