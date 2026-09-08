@@ -4,7 +4,8 @@ alias brew="/opt/homebrew/bin/brew"
 
 # User specific aliases
 alias home='cd ~' 
-alias notes='vim ~/Documents/notes/notes.md'
+alias wnotes='vim ~/Documents/obsidian/Work/notes.md'
+alias pnotes='vim ~/Documents/obsidian/Personal/notes.md'
 alias local-notes='vim ~/local-notes.md'
 
 if [ -n "$ZSH_VERSION" ]; then
@@ -21,6 +22,7 @@ alias vim='nvim'
 alias gup='git pull --rebase'
 alias gapa='git add --patch'
 alias gpf='git push --force-with-lease'
+alias gco='git branch | sed "s/^[* ]*//" | fzf | xargs git checkout'
 
 # Command line oldies
 alias ll='ls -lisa'
@@ -69,6 +71,3 @@ alias sep='cal -m 09'
 alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
-
-# Claude code
-alias my-claude='/Users/denispozo/.nvm/versions/node/v20.18.1/bin/claude'
