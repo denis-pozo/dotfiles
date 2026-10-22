@@ -47,17 +47,6 @@ alias kt='kubectl top'
 alias load-minikube='cp ~/.kube/minikube-config ~/.kube/config'
 alias load-awskube='cp ~/.kube/stroeer-labs-config ~/.kube/config'
 
-# AWS
-alias dsp-aws-activate='source ~/development/dsp-projects/terraform/bin/activate'
-
-# Browser-sync (live server emulator for js)
-alias serve='browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000'
-
-# MBR
-alias reload-creatives='kubectl get pods -l app.kubernetes.io/name=joker -o name | xargs -I% kubectl exec % -- joker-shell-execute reload-creatives-from-quarantined-campaigns'
-alias bidder='cd ~/development/dsp-projects/bidder'
-alias broker='cd ~/development/dsp-projects/broker'
-
 # Calendar tool
 alias jan='cal -m 01'
 alias feb='cal -m 02'
@@ -71,3 +60,11 @@ alias sep='cal -m 09'
 alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
+
+# Tmux sessions: attach if it exists, create it otherwise
+alias tmux='tmux new -As main -c ~'
+alias main='tmux new -As main -c ~'
+alias ssp='tmux new -As ssp -c ~/development/ssp-core'
+alias middleware='tmux new -As middleware -c ~/development/pim-dam-middleware-stroeer'
+alias myself='tmux new -As myself -c ~/development/playground/myself'
+alias finny='tmux new -As finny -c ~/development/playground/finny'
