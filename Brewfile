@@ -15,17 +15,20 @@ brew 'findutils'
 brew 'gnu-sed'
 brew 'grep'
 brew 'ripgrep'
+brew 'fd'
 brew 'gnu-getopt'
 brew 'postgresql@15'
+brew 'libpq'
 brew 'bat'
 
 # Bash shell, better version than the one macos comes with
 brew 'bash'
-brew 'bash-completion'
+brew 'bash-completion@2'
 
 # Zshell, the coolest shell
-brew 'zsh'
-brew 'zsh-completion'
+brew 'zsh-completions'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 brew 'fzf'
 
 # Starship theme
@@ -33,7 +36,8 @@ brew 'starship'
 
 # Preferred editor
 brew 'neovim'
-brew 'antibody'
+brew 'antidote'
+brew 'powerlevel10k'
 
 # Terminal multiplexer
 brew 'tmux'
@@ -51,6 +55,11 @@ brew 'jq'
 # Too Long Don't Read
 brew 'tldr'
 
+# Development tooling
+brew 'eslint'
+brew 'python@3.12'
+brew 'uv'
+
 # Make http requests with awesome response formatting
 brew 'curl'
 brew 'wget'
@@ -60,49 +69,28 @@ brew 'httpie'
 brew 'tree'
 brew 'pstree'
 
-# Kubernetes - Our favourite containers orchestrator
-brew 'kubectl'
-brew 'minikube'
-brew 'helm'
-
-# AWS tools
-# brew 'aws-cli'
-# brew 'aws-vault'
+# Docker credential helper for AWS ECR
+brew 'docker-credential-helper-ecr'
 
 # Managing dotfiles
 brew 'stow'
 
 # For pyenv: https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-brew 'openssl'
-brew 'readline'
-brew 'sqlite3'
-brew 'xz'
+brew 'openssl@4'
 brew 'zlib'
 brew 'tcl-tk'
-
-# --------------------------------------------
-# Terminal gimmics xD
-# --------------------------------------------
-
-# The computer fortune teller
-brew 'fortune'
-
-# The famous cowsay
-brew 'cowsay' 
-
-# Multicolored text output
-brew 'lolcat'
 
 # --------------------------------------------
 # Apps
 # --------------------------------------------
 
-cask '1password'
+cask 'azure-cli'
+cask 'codex'
+cask 'dbeaver-community'
 cask 'docker'
+cask 'docker-desktop'
+cask 'font-meslo-lg-nerd-font'
 cask 'git-credential-manager'
-cask 'google-chrome'
 cask 'iterm2'
-cask 'jetbrains-toolbox'
-cask 'slack'
 cask 'tunnelblick'
 
